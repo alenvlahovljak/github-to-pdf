@@ -1,19 +1,11 @@
 {
   "name": "github-to-pdf",
   "version": "1.0.0",
-  "description": "Convert github public (and private) info to PDF file",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "github",
-    "git",
-    "PDF",
-    "file",
-    "github-to-pdf",
-    "alenvlahovljak"
-  ],
-  "author": "Alen Vlahovljak",
+  "author": "",
   "license": "ISC"
 }
