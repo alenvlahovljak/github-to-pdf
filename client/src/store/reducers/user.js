@@ -1,14 +1,12 @@
 import { LOGIN, LOGOUT } from "../actionTypes";
 
 const DEFAULT_STATE = {
-	user: {
-		isLoggedIn: JSON.parse(localStorage.getItem("isLoggedIn")) || false,
-		user: JSON.parse(localStorage.getItem("user")) || null,
-		clientID: process.env.REACT_APP_URL,
-		proxyURL: process.env.REACT_APP_PROXY_URL,
-		redirectURI: process.env.REACT_APP_REDIRECT_URI,
-		secretKey: process.env.REACT_APP_SECRET_KEY
-	}
+	isLoggedIn: JSON.parse(localStorage.getItem("isLoggedIn")) || false,
+	user: JSON.parse(localStorage.getItem("user")) || null,
+	client_id: process.env.REACT_APP_URL,
+	proxyURL: process.env.REACT_APP_PROXY_URL,
+	redirect_uri: process.env.REACT_APP_REDIRECT_URI,
+	secretKey: process.env.REACT_APP_SECRET_KEY
 };
 
 export default (state = DEFAULT_STATE, action) => {
