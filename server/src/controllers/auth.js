@@ -1,9 +1,9 @@
 //define login auth controller
 const loginUser = async (req, res, next) => {
 	try {
-		const {} = req.body;
+		const { client_id, redirect_uri } = req.body;
 		console.log("BODY", req.body);
-		return res.status(200).json();
+		return res.json({ message: "Working" });
 	} catch (err) {
 		next(err);
 	}
