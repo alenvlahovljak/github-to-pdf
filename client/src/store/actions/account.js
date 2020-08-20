@@ -1,5 +1,7 @@
 import * as actionTypes from "../actionTypes";
 
+import { addErrorMessage, removeErrorMessage, addSuccessMessage, removeSuccessMessage } from ".";
+
 import { authenticateUserAPI } from "../../services/api";
 
 export const handleAuthenticateUser = (account) => {
@@ -18,6 +20,12 @@ export const authenticateUser = ({ code }) => {
 				redirect_uri: process.env.REACT_APP_REDIRECT_URI
 			});
 			dispatch(handleAuthenticateUser({ isLoggedIn: true, user: { ...user.data } }));
-		} catch (err) {}
+		} catch (err) {
+			console.log("HERE");
+			const { data } = err.response;
+			console.log("MSG", data.message);
+			dispatch(removeSuccessMessage());
+			dispatch(addErrorMessage({ message: data.message }));
+		}
 	};
 };

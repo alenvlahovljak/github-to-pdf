@@ -24,14 +24,16 @@ export const Login = ({ authenticateUser, isLoggedIn }) => {
 
 	return (
 		<div className="Login__main">
-			<span className="Login__info">Enter Application:</span>
-			<a
-				className="Login__github-login"
-				href={`${GITHUB_AUTH_URL}?scope=user&client_id=${process.env.REACT_APP_CLIENT_ID}`}
-			>
-				Login via GitHub
-			</a>
-			<button className="Login__guest-login">Login as Guest</button>
+			<div className="Login__container">
+				<span className="Login__info">Enter Application:</span>
+				<a
+					className="Login__github-login"
+					href={`${GITHUB_AUTH_URL}?scope=user&client_id=${process.env.REACT_APP_CLIENT_ID}`}
+				>
+					Login via GitHub
+				</a>
+				<button className="Login__guest-login">Login as Guest</button>
+			</div>
 		</div>
 	);
 };

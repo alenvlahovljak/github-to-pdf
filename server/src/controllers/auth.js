@@ -11,6 +11,9 @@ const loginUser = async (req, res, next) => {
 			...req.body,
 			client_secret: process.env.CLIENT_SECRET
 		});
+		if (!auth.data.includes("access_token")) {
+			return res.status(401).json({ message: "Unauthorized!" });
+		}
 		const user = await getUserAPI("GET", `${GITHUB_USER_URL}?${auth.data}`);
 		return res.status(200).json(user.data);
 	} catch (err) {

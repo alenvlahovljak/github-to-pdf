@@ -1,8 +1,8 @@
 import { ADD_ERROR_MESSAGE, REMOVE_ERROR_MESSAGE, ADD_SUCCESS_MESSAGE, REMOVE_SUCCESS_MESSAGE } from "../actionTypes";
 
 const DEFAULT_STATE = {
-	error: {},
-	success: {}
+	error: null,
+	success: null
 };
 
 export default (state = DEFAULT_STATE, action) => {

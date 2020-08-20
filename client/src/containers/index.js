@@ -1,4 +1,6 @@
+import Popup from "./Popup/Popup";
+
 import LandingPage from "./LandingPage/LandingPage";
 import Profile from "./Profile/Profile";
 
-export { LandingPage, Profile };
+export { Popup, LandingPage, Profile };

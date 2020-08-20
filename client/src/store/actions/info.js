@@ -1,8 +1,8 @@
 import { ADD_ERROR_MESSAGE, REMOVE_ERROR_MESSAGE, ADD_SUCCESS_MESSAGE, REMOVE_SUCCESS_MESSAGE } from "../actionTypes";
 
-export const addErrorMessage = (err) => ({
+export const addErrorMessage = (error) => ({
 	type: ADD_ERROR_MESSAGE,
-	err
+	error
 });
 
 export const removeErrorMessage = () => ({

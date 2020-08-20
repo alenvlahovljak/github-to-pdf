@@ -4,8 +4,8 @@ import account from "./account";
 import info from "./info";
 
 const rootReducer = combineReducers({
-	account,
-	info
+	info,
+	account
 });
 
 export default rootReducer;
