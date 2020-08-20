@@ -48,7 +48,7 @@ class Popup extends Component {
 
 	setMessage = () => {
 		const { error, success } = this.props;
-		console.log("MES", this.props);
+		console.log("props", this.props);
 		return error || success;
 	};
 

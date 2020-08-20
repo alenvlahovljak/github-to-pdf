@@ -17,6 +17,7 @@ const loginUser = async (req, res, next) => {
 		const user = await getUserAPI("GET", `${GITHUB_USER_URL}?${auth.data}`);
 		return res.status(200).json(user.data);
 	} catch (err) {
+		console.log("ERR", err);
 		next(err);
 	}
 };
