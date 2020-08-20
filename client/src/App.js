@@ -3,7 +3,7 @@ import { Router, Route, Redirect } from "react-router-dom";
 
 import history from "./history";
 
-import { LandingPage } from "./containers";
+import { LandingPage, Profile } from "./containers";
 
 import "./App.css";
 
@@ -11,10 +11,10 @@ class App extends Component {
 	render() {
 		return (
 			<Router history={history}>
-				<Route path="/" component={LandingPage} />
-				<Route path="/profile" />
+				<Route exact path="/login" component={LandingPage} />
+				<Route exact path="/profile" component={Profile} />
 				<Route>
-					<Redirect to="/" />
+					<Redirect to="/login" />
 				</Route>
 			</Router>
 		);

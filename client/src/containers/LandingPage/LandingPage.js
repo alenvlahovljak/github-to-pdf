@@ -1,11 +1,26 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
+import { authenticateUser } from "../../store/actions";
 
 import { Login } from "../../components/UI";
 
 class LandingPage extends Component {
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
-		return <Login />;
+		const { authenticateUser, isLoggedIn } = this.props;
+		return <Login authenticateUser={authenticateUser} isLoggedIn={isLoggedIn} />;
 	}
 }
 
-export default LandingPage;
+const mapStateToProps = (state) => {
+	return {
+		isLoggedIn: state.account.isLoggedIn,
+		user: state.account.user
+	};
+};
+
+export default connect(mapStateToProps, { authenticateUser })(LandingPage);

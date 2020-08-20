@@ -8,7 +8,7 @@ const router = express.Router();
 const { loginUser } = require("../controllers/auth");
 
 //define auth route
-router.route("/user").post(loginUser);
+router.route("/").post(loginUser);
 
 //export auth route
 module.exports = router;

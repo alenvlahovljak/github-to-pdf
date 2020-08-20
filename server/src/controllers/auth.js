@@ -1,9 +1,18 @@
+//require necessary module
+const { githubAuthAPI, getUserAPI } = require("../utils/api");
+
+//require constants
+const { GITHUB_AUTH, GITHUB_USER_URL } = require("../utils/constants");
+
 //define login auth controller
 const loginUser = async (req, res, next) => {
 	try {
-		const { client_id, redirect_uri } = req.body;
-		console.log("BODY", req.body);
-		return res.json({ message: "Working" });
+		const auth = await githubAuthAPI("POST", `${GITHUB_AUTH}/access_token`, {
+			...req.body,
+			client_secret: process.env.CLIENT_SECRET
+		});
+		const user = await getUserAPI("GET", `${GITHUB_USER_URL}?${auth.data}`);
+		return res.status(200).json(user.data);
 	} catch (err) {
 		next(err);
 	}
