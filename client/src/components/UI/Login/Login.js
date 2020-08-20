@@ -19,10 +19,8 @@ export const Login = ({ authenticateUser, isLoggedIn }) => {
 			history.push("/profile");
 		}
 
-		return () => {
-			location.search = "";
-		};
-	}, []);
+		return () => {};
+	});
 
 	return (
 		<div className="Login__main">

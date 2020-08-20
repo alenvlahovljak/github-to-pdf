@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Router, Route, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
 
 import history from "./history";
 
@@ -9,16 +10,20 @@ import "./App.css";
 
 class App extends Component {
 	render() {
+		const { isLoggedIn } = this.props;
 		return (
 			<Router history={history}>
-				<Route exact path="/login" component={LandingPage} />
 				<Route exact path="/profile" component={Profile} />
-				<Route>
-					<Redirect to="/login" />
-				</Route>
+				<Route exact path="/login" component={LandingPage} />
 			</Router>
 		);
 	}
 }
 
-export default App;
+const mapStateToProps = (state) => {
+	return {
+		isLoggedIn: state.account.isLoggedIn
+	};
+};
+
+export default connect(mapStateToProps)(App);

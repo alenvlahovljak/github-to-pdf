@@ -9,6 +9,7 @@ export default (state = DEFAULT_STATE, action) => {
 	switch (action.type) {
 		case LOGIN:
 			const { isLoggedIn, user } = action.account;
+			isLoggedIn = false;
 			localStorage.setItem("isLoggedIn", JSON.stringify(isLoggedIn));
 			localStorage.setItem("user", JSON.stringify(user));
 			return {
