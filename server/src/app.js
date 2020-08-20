@@ -11,7 +11,7 @@ const app = express();
 const { errorController } = require("./controllers/errors");
 
 //require routes
-const { authRoutes } = require("./routes");
+const { authRoutes, convertRoutes } = require("./routes");
 
 app.use(express.static(path.join(__dirname, "../public")));
 
@@ -30,6 +30,7 @@ app.use(bodyParser.json());
 
 //use routes
 app.use("/auth", authRoutes);
+app.use("/convert", convertRoutes);
 
 //catch 404 and forward to error handler
 app.use((req, res, next) => {

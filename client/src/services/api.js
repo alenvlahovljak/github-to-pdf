@@ -7,3 +7,11 @@ export const authenticateUserAPI = (method, url, data) => {
 		data
 	});
 };
+
+export const convertToJSONAPI = (method, url, data) => {
+	return axios({
+		method,
+		url,
+		data
+	});
+};

@@ -28,7 +28,6 @@ export const authenticateUser = ({ code }) => {
 			dispatch(addSuccessMessage(SUCCESS_MESSAGES.LOGGED_IN));
 			history.push("/profile");
 		} catch (err) {
-			console.log(err);
 			const { data } = err.response;
 			dispatch(removeSuccessMessage());
 			dispatch(addErrorMessage({ message: data.message }));
