@@ -20,9 +20,7 @@ class App extends Component {
 					) : (
 						<Route exact path="/login" component={LandingPage} />
 					)}
-					<Route>
-						<Redirect to="/login" />
-					</Route>
+					<Route>{isLoggedIn ? <Redirect to="/profile" /> : <Redirect to="/login" />}</Route>
 				</Switch>
 			</Router>
 		);
