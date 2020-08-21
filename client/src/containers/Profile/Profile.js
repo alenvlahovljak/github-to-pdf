@@ -35,13 +35,15 @@ class Profile extends Component {
 		const { login, avatar_url, name, company, blog, location, email, bio } = this.props.user;
 		return (
 			<div className="Profile__main">
-				<nav className="Profile__navbar">
-					<img className="Profile__avatar" src={avatar_url || defaultAvatar} alt="Default avatar" />
-					<span className="Profile__nick">{login || "No User!"}</span>
-					<Link className="Profile__logout" to="/login">
-						Log Out
-					</Link>
-				</nav>
+				<div className="Profile__container">
+					<nav className="Profile__navbar">
+						<img className="Profile__avatar" src={avatar_url || defaultAvatar} alt="Default avatar" />
+						<span className="Profile__nick">{login || "No User!"}</span>
+						<Link className="Profile__logout" to="/login">
+							Log Out
+						</Link>
+					</nav>
+				</div>
 				<main className="Profile__content">
 					<form className="Profile__form" onSubmit={this.onSubmitHandler}>
 						<label htmlFor="login">Login:</label>

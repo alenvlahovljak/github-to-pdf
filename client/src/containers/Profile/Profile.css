@@ -8,9 +8,18 @@
 	flex-grow: 1;
 }
 
+.Profile__container {
+	width: 100%;
+	display: flex;
+	box-shadow: 0px 2px 1px #e1e4e8;
+	background-color: white;
+	justify-content: center;
+}
+
 .Profile__navbar {
 	width: 100%;
-	background-color: white;
+	box-sizing: border-box;
+	padding: 1rem 0;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -18,10 +27,15 @@
 
 .Profile__avatar {
 	height: 3rem;
+	width: 3rem;
+	border-radius: 50%;
 }
 
 .Profile__nick {
+	max-width: 50%;
+	text-align: center;
 	font-size: 1.5rem;
+	padding: 0 0.7rem;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -46,4 +60,188 @@
 	width: 100%t;
 	display: flex;
 	flex-direction: column;
+}
+
+@media screen and (min-width: 320px) {
+	.Profile__navbar {
+		padding: 1.2rem 1rem;
+	}
+
+	.Profile__avatar {
+		height: 3.2rem;
+		width: 3.2rem;
+	}
+
+	.Profile__nick {
+		padding: 0 1rem;
+	}
+
+	.Profile__logout {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (min-width: 360px) {
+	.Profile__navbar {
+		padding: 1.2rem;
+	}
+
+	.Profile__avatar {
+		height: 3.3rem;
+		width: 3.3rem;
+	}
+
+	.Profile__logout {
+		padding: 1rem 1.2rem;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.Profile__navbar {
+		padding: 1.4rem;
+	}
+
+	.Profile__avatar {
+		height: 3.4rem;
+		width: 3.4rem;
+	}
+
+	.Profile__nick {
+		max-width: 60%;
+
+		padding: 0 1.2rem;
+	}
+
+	.Profile__logout {
+		padding: 1rem 1.4rem;
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (min-width: 520px) {
+	.Profile__navbar {
+		padding: 1.5rem;
+	}
+
+	.Profile__avatar {
+		height: 3.5rem;
+		width: 3.5rem;
+	}
+
+	.Profile__nick {
+		max-width: 55%;
+		padding: 0 1rem;
+	}
+
+	.Profile__logout {
+		padding: 1rem 1.5rem;
+		font-size: 1.4rem;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.Profile__navbar {
+		justify-content: space-evenly;
+		padding: 1.7rem;
+	}
+
+	.Profile__avatar {
+		height: 3.7rem;
+		width: 3.7rem;
+	}
+
+	.Profile__nick {
+		padding: 0 0.7rem;
+	}
+}
+
+@media screen and (min-width: 720px) {
+	.Profile__navbar {
+		padding: 1.7rem 2rem;
+	}
+
+	.Profile__avatar {
+		height: 3.9rem;
+		width: 3.9rem;
+	}
+
+	.Profile__nick {
+		font-size: 1.6rem;
+		padding: 0 0.5rem;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.Profile__navbar {
+		padding: 1.7rem 2.5rem;
+	}
+
+	.Profile__avatar {
+		height: 4rem;
+		width: 4rem;
+	}
+
+	.Profile__logout {
+		padding: 1rem 1.7rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.Profile__navbar {
+		padding: 1.7rem 3.5rem;
+	}
+
+	.Profile__nick {
+		padding: 0 1rem;
+	}
+
+	.Profile__logout {
+		padding: 1rem 2rem;
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.Profile__navbar {
+		width: 100rem;
+		padding: 1.7rem 5rem;
+	}
+
+	.Profile__avatar {
+		height: 4.2rem;
+		width: 4.2rem;
+	}
+
+	.Profile__nick {
+		max-width: 40rem;
+		font-size: 1.6rem;
+		padding: 0 0.5rem;
+	}
+
+	.Profile__logout {
+		padding: 1rem 2rem;
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	.Profile__navbar {
+		padding: 1.7rem 6rem;
+	}
+
+	.Profile__avatar {
+		height: 4.4rem;
+		width: 4.4em;
+	}
+
+	.Profile__nick {
+		max-width: 40rem;
+		font-size: 1.7rem;
+		padding: 0 0.4rem;
+	}
+
+	.Profile__logout {
+		padding: 1rem 3rem;
+		font-size: 1.6rem;
+	}
 }
