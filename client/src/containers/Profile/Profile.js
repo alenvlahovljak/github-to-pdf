@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import { BASE_URL } from "../../config/api";
+
 import { newUser, logout } from "../../store/actions";
 
 import history from "../../history";
@@ -113,6 +115,7 @@ class Profile extends Component {
 							<TextareaAutosize
 								minRows="1"
 								maxRows="5"
+								maxLength="155"
 								id="bio"
 								name="bio"
 								defaultValue={bio}
@@ -125,7 +128,7 @@ class Profile extends Component {
 							<span className="Profile_open-json">
 								<a
 									onClick={() => this.setState({ savedToJSON: false })}
-									href={`http://localhost:8000/static/profile/json/${node_id}.json`}
+									href={`${BASE_URL}/static/profile/json/${node_id}.json`}
 									target="_blank"
 								>
 									Open JSON
