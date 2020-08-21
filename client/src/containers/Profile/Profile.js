@@ -6,6 +6,8 @@ import { newUser } from "../../store/actions";
 
 import history from "../../history";
 
+import TextareaAutosize from "react-textarea-autosize";
+
 import "./Profile.css";
 
 import defaultAvatar from "../../public/images/avatar.png";
@@ -46,47 +48,64 @@ class Profile extends Component {
 				</div>
 				<main className="Profile__content">
 					<form className="Profile__form" onSubmit={this.onSubmitHandler}>
-						<label htmlFor="login">Login:</label>
-						<input type="text" id="login" name="login" defaultValue={login} />
-
-						<label htmlFor="name">Name:</label>
-						<input type="text" id="name" name="name" defaultValue={name} placeholder="What is your name?" />
-
-						<label htmlFor="company">Company:</label>
-						<input
-							type="text"
-							id="company"
-							name="company"
-							defaultValue={company}
-							placeholder="Where do you work?"
-						/>
-
-						<label htmlFor="blog">Blog:</label>
-						<input type="text" id="blog" name="blog" defaultValue={blog} placeholder="Do you have a Blog?" />
-
-						<label htmlFor="location">Location:</label>
-						<input
-							type="text"
-							id="location"
-							name="location"
-							defaultValue={location}
-							placeholder="Where do you live?"
-						/>
-
-						<label htmlFor="email">Email:</label>
-						<input
-							type="email"
-							id="email"
-							name="email"
-							defaultValue={email}
-							placeholder="What is your email adress?"
-						/>
-
-						<label htmlFor="bio">Bio:</label>
-						<input type="text" id="bio" name="bio" defaultValue={bio} placeholder="Tell us your story?" />
-
-						<button>Convert to JSON</button>
+						<div className="Profile__item">
+							<label htmlFor="login">Login:</label>
+							<input type="text" id="login" name="login" defaultValue={login} />
+						</div>
+						<div className="Profile__item">
+							<label htmlFor="name">Name:</label>
+							<input type="text" id="name" name="name" defaultValue={name} placeholder="What is your name?" />
+						</div>
+						<div className="Profile__item">
+							<label htmlFor="company">Company:</label>
+							<input
+								type="text"
+								id="company"
+								name="company"
+								defaultValue={company}
+								placeholder="Where do you work?"
+							/>
+						</div>
+						<div className="Profile__item">
+							<label htmlFor="blog">Blog:</label>
+							<input type="text" id="blog" name="blog" defaultValue={blog} placeholder="Do you have a Blog?" />
+						</div>
+						<div className="Profile__item">
+							<label htmlFor="location">Location:</label>
+							<input
+								type="text"
+								id="location"
+								name="location"
+								defaultValue={location}
+								placeholder="Where do you live?"
+							/>
+						</div>
+						<div className="Profile__item">
+							<label htmlFor="email">Email:</label>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								defaultValue={email}
+								placeholder="What is your email adress?"
+							/>
+						</div>
+						<div className="Profile__item">
+							<label htmlFor="bio">Bio:</label>
+							<TextareaAutosize
+								minRows="1"
+								maxRows="5"
+								id="bio"
+								name="bio"
+								defaultValue={bio}
+								placeholder="Tell us your story?"
+							/>
+						</div>
 					</form>
+					<div className="Profile_buttons">
+						<button onClick={this.onSubmitHandler}>Convert to JSON</button>
+						<button onClick={this.onSubmitHandler}>Convert to PDF</button>
+					</div>
 				</main>
 			</div>
 		);

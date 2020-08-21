@@ -1,10 +1,10 @@
 .Profile__main {
-	background-color: tomato;
 	width: 100%;
 	align-self: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-between; /*test */
 	flex-grow: 1;
 }
 
@@ -49,17 +49,94 @@
 }
 
 .Profile__content {
-	background-color: violet;
-	width: 100%t;
+	margin-top: 1rem;
+	width: 100%;
+	height: 70vh;
+	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 .Profile__form {
-	background-color: violet;
-	width: 100%t;
+	display: inline-block;
+	width: 100%;
 	display: flex;
+	margin-bottom: 3rem;
 	flex-direction: column;
+	align-items: center;
+	overflow-y: auto;
+}
+
+.Profile__item {
+	width: 100%;
+	display: flex;
+	font-size: 1.4rem;
+	box-sizing: border-box;
+	padding: 0.5rem 2rem;
+	flex-direction: column;
+}
+
+.Profile__item label {
+	color: #24292e;
+	padding-bottom: 0.7rem;
+}
+
+.Profile__item input {
+	padding: 1rem 0.5rem;
+	border-radius: 6px;
+	background-color: #fafbfc;
+	border: 1px solid #e1e4e8;
+}
+
+.Profile__item input:focus {
+	border-color: #0366d6;
+	box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+	outline: none;
+}
+
+.Profile__item textarea {
+	width: 100%;
+	background-color: #fafbfc;
+	border: 1px solid #e1e4e8;
+	box-sizing: border-box;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	padding: 0.5rem 5rem;
+	overflow: hidden;
+	resize: none;
+}
+
+.Profile__item textarea:focus {
+	border-color: #0366d6;
+	box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+	outline: none;
+}
+
+.Profile_buttons {
+	width: 100%;
+	padding: 1rem 0;
+	display: flex;
+	justify-content: center;
+}
+
+.Profile_buttons button {
+	border-radius: 6px;
+	flex-grow: 1;
+	height: 4rem;
+}
+
+.Profile_buttons button:nth-child(1) {
+	color: #fff;
+	background-color: #17a2b8;
+	border: 1px solid #17a2b8;
+	margin-right: 1rem;
+}
+
+.Profile_buttons button:nth-child(2) {
+	color: #fff;
+	background-color: #17a2b8;
+	border: 1px solid #17a2b8;
+	margin-left: 1rem;
 }
 
 @media screen and (min-width: 320px) {
@@ -116,6 +193,14 @@
 		padding: 1rem 1.4rem;
 		font-size: 1.3rem;
 	}
+
+	.Profile__form {
+		width: 90%;
+	}
+
+	.Profile_buttons {
+		width: 90%;
+	}
 }
 
 @media screen and (min-width: 520px) {
@@ -137,6 +222,14 @@
 		padding: 1rem 1.5rem;
 		font-size: 1.4rem;
 	}
+
+	.Profile__form {
+		width: 85%;
+	}
+
+	.Profile_buttons {
+		width: 85%;
+	}
 }
 
 @media screen and (min-width: 600px) {
@@ -152,6 +245,14 @@
 
 	.Profile__nick {
 		padding: 0 0.7rem;
+	}
+
+	.Profile__form {
+		width: 80%;
+	}
+
+	.Profile_buttons {
+		width: 80%;
 	}
 }
 
@@ -169,6 +270,14 @@
 		font-size: 1.6rem;
 		padding: 0 0.5rem;
 	}
+
+	.Profile__form {
+		width: 70%;
+	}
+
+	.Profile_buttons {
+		width: 70%;
+	}
 }
 
 @media screen and (min-width: 800px) {
@@ -184,6 +293,14 @@
 	.Profile__logout {
 		padding: 1rem 1.7rem;
 	}
+
+	.Profile__form {
+		width: 66%;
+	}
+
+	.Profile_buttons {
+		width: 66%;
+	}
 }
 
 @media screen and (min-width: 1024px) {
@@ -198,6 +315,14 @@
 	.Profile__logout {
 		padding: 1rem 2rem;
 		font-size: 1.5rem;
+	}
+
+	.Profile__form {
+		width: 60%;
+	}
+
+	.Profile_buttons {
+		width: 60%;
 	}
 }
 
@@ -221,6 +346,14 @@
 	.Profile__logout {
 		padding: 1rem 2rem;
 		font-size: 1.5rem;
+	}
+
+	.Profile__form {
+		width: 70rem;
+	}
+
+	.Profile_buttons {
+		width: 70rem;
 	}
 }
 
