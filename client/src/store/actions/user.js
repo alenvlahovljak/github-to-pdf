@@ -20,6 +20,7 @@ export const newUser = (data) => {
 			dispatch(handleNewUser(data));
 		} catch (err) {
 			const { data } = err.response;
+			console.log(err.response.data);
 			dispatch(removeSuccessMessage());
 			dispatch(addErrorMessage({ message: data.message }));
 		}
