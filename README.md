@@ -17,3 +17,15 @@ To get the Node server running locally:
    -  REACT_APP_REDIRECT_URI = http://localhost:3000/login
 
 Alternately, to quickly try out this repo at [THIS](https://github-to-pdf.netlify.app/) link.
+
+# Code Overview
+
+## Application Structure
+
+-  `client` - React App
+-  `server` - Express App
+
+## Folder Structure
+
+├───client
+├───server
