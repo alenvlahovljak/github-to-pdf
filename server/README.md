@@ -1,8 +1,8 @@
-# GitHub to PDF
+# GitHub to PDF API
 
 API is responsible for authenticating GitHub account.
 
-> ### Technologies: React.js, Express.js, Node.js, MongoDB
+> ### Technologies: Express.js, Node.js
 
 # Getting started
 
