@@ -8,7 +8,6 @@ import "./Login.css";
 
 export const Login = ({ authenticateUser, isLoggedIn }) => {
 	useEffect(() => {
-		console.log("HIS", history.location);
 		const { location } = history;
 		if (location.search.includes("?code=")) {
 			const code = location.search.split("=")[1];

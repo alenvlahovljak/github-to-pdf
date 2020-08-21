@@ -5,13 +5,12 @@ const path = require("path");
 //define convert to JSON controller
 const convertToJSON = (req, res, next) => {
 	try {
-		const storage = path.join(__dirname, `../public/storage/profiles/${req.body.node_id}.json`);
+		const storage = path.join(__dirname, `../public/storage/profiles/json/${req.body.node_id}.json`);
 		fs.writeFile(storage, JSON.stringify(req.body), (err) => {
-			if (err) return console.log(err);
+			if (err) return next();
 			return res.status(201).json({ message: "JSON saved!" });
 		});
 	} catch (err) {
-		console.log(err);
 		next(err);
 	}
 };

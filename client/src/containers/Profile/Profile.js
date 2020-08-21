@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { newUser } from "../../store/actions";
+import { newUser, logout } from "../../store/actions";
 
 import history from "../../history";
 
 import TextareaAutosize from "react-textarea-autosize";
+import ReactToPdf from "react-to-pdf";
 
 import "./Profile.css";
 
@@ -15,10 +15,15 @@ import defaultAvatar from "../../public/images/avatar.png";
 class Profile extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			savedToJSON: false
+		};
 	}
 
+	formRef = React.createRef();
+
 	onSubmitHandler = (e) => {
-		const { newUser } = this.props;
+		const { newUser, savedUser } = this.props;
 		const { node_id } = this.props.user;
 		e.preventDefault();
 		const user = Array.from(document.querySelector("form")).reduce((acc, nextValue) => {
@@ -26,6 +31,13 @@ class Profile extends Component {
 			return acc;
 		}, {});
 		newUser({ ...user, node_id });
+		if (savedUser.node_id) this.setState({ savedToJSON: true });
+	};
+
+	logout = () => {
+		const { logout } = this.props;
+		logout();
+		history.push("/login");
 	};
 
 	componentWillMount = () => {
@@ -33,21 +45,27 @@ class Profile extends Component {
 		if (!isLoggedIn) return history.push("/login");
 	};
 
+	componentDidUpdate = (prevProps) => {
+		const { node_id } = this.props.savedUser;
+		if (prevProps.savedUser.node_id != node_id) this.setState({ savedToJSON: true });
+	};
+
 	render() {
-		const { login, avatar_url, name, company, blog, location, email, bio } = this.props.user;
+		const { savedToJSON } = this.state;
+		const { node_id, login, avatar_url, name, company, blog, location, email, bio } = this.props.user;
 		return (
 			<div className="Profile__main">
 				<div className="Profile__container">
 					<nav className="Profile__navbar">
 						<img className="Profile__avatar" src={avatar_url || defaultAvatar} alt="Default avatar" />
 						<span className="Profile__nick">{login || "No User!"}</span>
-						<Link className="Profile__logout" to="/login">
+						<a className="Profile__logout" onClick={this.logout}>
 							Log Out
-						</Link>
+						</a>
 					</nav>
 				</div>
 				<main className="Profile__content">
-					<form className="Profile__form" onSubmit={this.onSubmitHandler}>
+					<form className="Profile__form" onSubmit={this.onSubmitHandler} ref={this.formRef}>
 						<div className="Profile__item">
 							<label htmlFor="login">Login:</label>
 							<input type="text" id="login" name="login" defaultValue={login} />
@@ -103,8 +121,22 @@ class Profile extends Component {
 						</div>
 					</form>
 					<div className="Profile_buttons">
-						<button onClick={this.onSubmitHandler}>Convert to JSON</button>
-						<button onClick={this.onSubmitHandler}>Convert to PDF</button>
+						{savedToJSON ? (
+							<span className="Profile_open-json">
+								<a
+									onClick={() => this.setState({ savedToJSON: false })}
+									href={`http://localhost:8000/static/profile/json/${node_id}.json`}
+									target="_blank"
+								>
+									Open JSON
+								</a>
+							</span>
+						) : (
+							<button onClick={this.onSubmitHandler}>Convert to JSON</button>
+						)}
+						<ReactToPdf targetRef={this.formRef} filename={`${node_id}.pdf`}>
+							{({ toPdf }) => <button onClick={toPdf}>Download PDF</button>}
+						</ReactToPdf>
 					</div>
 				</main>
 			</div>
@@ -115,8 +147,9 @@ class Profile extends Component {
 const mapStateToProps = (state) => {
 	return {
 		isLoggedIn: state.account.isLoggedIn,
-		user: state.account.user
+		user: state.account.user,
+		savedUser: state.user.newUser
 	};
 };
 
-export default connect(mapStateToProps, { newUser })(Profile);
+export default connect(mapStateToProps, { newUser, logout })(Profile);

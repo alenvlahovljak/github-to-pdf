@@ -13,15 +13,19 @@ const { errorController } = require("./controllers/errors");
 //require routes
 const { authRoutes, convertRoutes } = require("./routes");
 
-app.use(express.static(path.join(__dirname, "../public")));
+//serve static files
+app.use(express.static(path.join(__dirname, "../public/storage/profiles")));
+
+//configure static files serving
+app.use("/static/profile/json", express.static(path.join(__dirname, "./public/storage/profiles/json")));
 
 //configure modules usage
 app.use(
 	cors({
 		credentials: true,
 		origin: (origin, cb) => {
-			/*if (CORS.WHITE_LIST.includes(origin)) */ return cb(null, true);
-			cb(new Error("Not allowed by CORS!"));
+			return cb(null, true);
+			if (CORS.WHITE_LIST.includes(origin)) cb(new Error("Not allowed by CORS!"));
 		}
 	})
 );

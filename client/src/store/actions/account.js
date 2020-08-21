@@ -34,3 +34,22 @@ export const authenticateUser = ({ code }) => {
 		}
 	};
 };
+
+export const handleLogout = () => {
+	return {
+		type: actionTypes.LOGOUT
+	};
+};
+
+export const logout = () => {
+	return async (dispatch) => {
+		try {
+			dispatch(handleLogout());
+			dispatch(removeErrorMessage());
+			dispatch(addSuccessMessage(SUCCESS_MESSAGES.LOGGED_OUT));
+		} catch (err) {
+			dispatch(removeSuccessMessage());
+			dispatch(addErrorMessage({ message: "Unable to logout!" }));
+		}
+	};
+};
