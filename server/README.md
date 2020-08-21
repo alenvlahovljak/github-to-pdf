@@ -27,7 +27,7 @@ Alternately, to quickly try out this repo in [Heroku](https://github-to-pdf-api.
 
 ## Application Structure
 
--  `src/controllers/` - App route handlers and business logic. -`src/public/`
+-  `src/controllers/` - App route handlers and business logic.
 -  `src/public/` - Folder contain JSON storage.
 -  `src/routes/` - App routes, with HTTP methods. For example, you can define everything related to the user.
 -  `src/services/` - Third-party services configuration.
