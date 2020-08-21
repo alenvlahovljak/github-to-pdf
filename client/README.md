@@ -11,7 +11,7 @@ To get the Node server running locally:
 -  Clone this repo
 -  `npm install` to install all required dependencies
 -  `npm start` to start the local server
--  You have to set this variable for local usage:
+-  You have to set a couple of variables for local usage:
    -  REACT_APP_CLIENT_ID = 77c0100e60b4bd8cff17
    -  REACT_APP_PROXY_URL = http://localhost:8000/auth
    -  REACT_APP_REDIRECT_URI = http://localhost:3000/login

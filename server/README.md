@@ -11,7 +11,7 @@ To get the Node server running locally:
 -  Clone this repo
 -  `npm install` to install all required dependencies
 -  `npm run start` to start the local server
--  You have to set this variable:
+-  You have to set this variable for local usage:
    -  REACT_APP_CLIENT_SECRET = Your Client Secret
 
 Alternately, to quickly try out this repo in [Heroku](https://github-to-pdf-api.herokuapp.com/)
