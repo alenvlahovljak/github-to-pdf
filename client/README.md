@@ -21,6 +21,21 @@ Alternately, to quickly try out this repo at [THIS](https://github-to-pdf.netlif
 
 # Code Overview
 
+## Dependencies
+
+-  [@fortawesome/react-fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome) - Official React component for Font Awesome 5.
+-  [axios](https://www.npmjs.com/package/axios) - Promise based HTTP client for the browser and Node.js.
+-  [env-cmd](https://www.npmjs.com/package/env-cmd) - Node program for executing commands using an environment from an .env file.
+-  [react](https://www.npmjs.com/package/react) - React is a JavaScript library for creating user interfaces.
+-  [react-dom](https://www.npmjs.com/package/react-dom) - React package for working with the DOM.
+-  [react-redux](https://www.npmjs.com/package/react-redux) - Official React bindings for Redux.
+-  [react-router-dom](https://www.npmjs.com/package/react-router-dom) - DOM bindings for React Router.
+-  [react-scripts](https://www.npmjs.com/package/react-scripts) - Configuration and scripts for Create React App.
+-  [react-textarea-autosize](https://www.npmjs.com/package/react-textarea-autosize) - Textarea component for React.
+-  [react-to-pdf](https://www.npmjs.com/package/react-to-pdf) - Easily create pdf documents from React components.
+-  [redux](https://www.npmjs.com/package/redux) - Predictable state container for JavaScript apps.
+-  [redux-thunk](https://www.npmjs.com/package/redux-thunk) - Thunk middleware for Redux.
+
 ## Application Structure
 
 -  `src/components/` - Stateless components.
