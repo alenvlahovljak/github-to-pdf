@@ -29,5 +29,7 @@ Alternately, to quickly try out this repo at [THIS](https://github-to-pdf.netlif
 
 ## Folder Structure
 
+```
 ├───client
 └───server
+```
