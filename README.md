@@ -1,5 +1,7 @@
 # GitHub to PDF
 
+Application is authenticating your GitHub account thought OAuth Third-part logic. After verification, you can (temporarily) change your info (if you wish), and export it as JSON of PDF.
+
 > ### Technologies: React.js, Express.js, Node.js
 
 # Getting started
