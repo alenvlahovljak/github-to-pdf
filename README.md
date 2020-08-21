@@ -17,6 +17,7 @@ To get the Node server running locally:
    -  REACT_APP_CLIENT_ID = Your Client ID
    -  REACT_APP_CLIENT_SECRET = Your Client Secret
    -  REACT_APP_REDIRECT_URI = http://localhost:3000/login
+-  In order to serve .env file you can use for example use [dotenv](https://www.npmjs.com/package/dotenv) - a zero-dependency module that loads environment variables from a .env file into process.env.
 
 Alternately, to quickly try out this repo at [THIS](https://github-to-pdf.netlify.app/) link.
 
