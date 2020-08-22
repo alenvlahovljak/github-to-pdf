@@ -75,6 +75,7 @@ Frontend is deployed on [Netlify](https://github-to-pdf.netlify.app/).
 
 The process of deploy:
 
+-  Login to Netlify account via Browser
 -  Connect to Git provider
 -  Pick a repo
 -  Config build and deploy
