@@ -34,3 +34,7 @@ Alternately, to quickly try out this repo at [THIS](https://github-to-pdf.netlif
 ├───client
 └───server
 ```
+
+## Storage
+
+Your JSON files are saving into storage at `server/src/public/profiles/json`

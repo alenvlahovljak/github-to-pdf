@@ -52,3 +52,7 @@ Alternately, to quickly try out this repo in [Heroku](https://github-to-pdf-api.
 ## Error Handling
 
 Using custom error controller.
+
+## Storage
+
+Your JSON files are saving into storage at `src/public/profiles/json`
