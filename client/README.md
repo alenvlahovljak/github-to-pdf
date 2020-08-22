@@ -19,6 +19,12 @@ To get the Node server running locally:
 
 Alternately, to quickly try out this repo at [THIS](https://github-to-pdf.netlify.app/) link.
 
+# Architecture
+
+## Components Model
+
+# ![React Components Model](https://ibb.co/vmXQtdJ)
+
 # Code Overview
 
 ## Dependencies
