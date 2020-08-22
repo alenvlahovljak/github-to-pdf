@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should create JSON 1`] = `
+Object {
+  "message": "JSON saved!",
+}
+`;

@@ -5,6 +5,9 @@ const path = require("path");
 //define convert to JSON controller
 const convertToJSON = (req, res, next) => {
 	try {
+		if (req.body.node_id == undefined) {
+			return next();
+		}
 		const storage = path.join(__dirname, `../public/storage/profiles/json/${req.body.node_id}.json`);
 		fs.writeFile(storage, JSON.stringify(req.body), (err) => {
 			if (err) return next();
