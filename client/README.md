@@ -68,3 +68,14 @@ Alternately, to quickly try out this repo at [THIS](https://github-to-pdf.netlif
         ├───actions
         └───reducers
 ```
+
+# Deploy
+
+Frontend is deployed on [Netlify](https://github-to-pdf.netlify.app/).
+
+The process of deploy:
+
+-  Connect to Git provider
+-  Pick a repo
+-  Config build and deploy
+-  Add Environment variables

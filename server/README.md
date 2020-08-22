@@ -56,3 +56,17 @@ Using custom error controller.
 ## Storage
 
 Your JSON files are saving into storage at `src/public/profiles/json`
+
+# Deploy
+
+Backend is deployed on [Heroku](https://github-to-pdf-api.herokuapp.com/).
+
+The process of deploy:
+
+-  Commit to Git master
+-  Create Heroku app (CLI: `$ heroku create`)
+-  Change Heroku name (CLI: `$ heroku apps:rename github-to-pdf-api`)
+-  Update Git remotes (CLI: `$ git remote rm heroku` and then `$ heroku git:remote - a github-to-pdf-api.git`)
+-  Set config variables:
+   -  CLI: `$ heroku config:set CLIENT_SECRET=Your_client_secret`
+-  Open Heroku app (CLI: `$ heroku open`) and test it

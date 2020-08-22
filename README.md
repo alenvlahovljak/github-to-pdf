@@ -38,3 +38,8 @@ Alternately, to quickly try out this repo at [THIS](https://github-to-pdf.netlif
 ## Storage
 
 Your JSON files are saving into storage at `server/src/public/profiles/json`
+
+# Delpoy
+
+-  Frontend Delpoy process at [THIS](https://github.com/alenvlahovljak/github-to-pdf/blob/master/client/README.md) link.
+-  Backend Deploy process at [THIS](https://github.com/alenvlahovljak/github-to-pdf/blob/master/server/README.md) link.
