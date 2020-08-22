@@ -21,6 +21,12 @@ To get the Node server running locally:
 
 Alternately, to quickly try out this repo at [THIS](https://github-to-pdf.netlify.app/) link.
 
+# Architecture
+
+## Data Flow Diagram (oAuth GitHub)
+
+# ![Data Flow Diagram](./docs/Data-Flow-Diagram.png)
+
 # Code Overview
 
 ## Application Structure
