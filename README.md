@@ -10,8 +10,8 @@ To get the Node server running locally:
 
 -  Clone this repo
 -  `npm build` to install all required dependencies
--  `npm start server` to start the local server
--  `npm start client` to start the react app
+-  `npm run server` to start the local server
+-  `npm run client` to start the react app
 -  Create an OAuth App (GitHUb) [instructions](https://docs.github.com/en/developers/apps/creating-an-oauth-app)
 -  Create a .env file in the root folder and set these variables:
    -  REACT_APP_CLIENT_ID = Your Client ID
