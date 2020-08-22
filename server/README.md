@@ -68,5 +68,5 @@ The process of deploy:
 -  Change Heroku name (CLI: `$ heroku apps:rename github-to-pdf-api`)
 -  Update Git remotes (CLI: `$ git remote rm heroku` and then `$ heroku git:remote - a github-to-pdf-api.git`)
 -  Set config variables:
-   -  CLI: `$ heroku config:set CLIENT_SECRET=Your_client_secret`
+   -  CLIENT_SECRET (CLI: `$ heroku config:set CLIENT_SECRET=Your_client_secret`)
 -  Open Heroku app (CLI: `$ heroku open`) and test it
