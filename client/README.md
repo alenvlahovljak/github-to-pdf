@@ -23,7 +23,7 @@ Alternately, to quickly try out this repo at [THIS](https://github-to-pdf.netlif
 
 ## Components Model
 
-# ![React Components Model](https://ibb.co/vmXQtdJ)
+# ![React Components Model](./docs/React-Component-Model.png)
 
 # Code Overview
 
