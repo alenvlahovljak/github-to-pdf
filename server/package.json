@@ -20,5 +20,14 @@
 		"env-cmd": "^10.1.0",
 		"jest": "^26.4.0",
 		"supertest": "^4.0.2"
+	},
+	"jest": {
+		"testEnvironment": "node",
+		"collectCoverage": true,
+		"collectCoverageFrom": [
+			"**/*.{js}",
+			"!**/node_modules/**"
+		],
+		"coverageDirectory": "./coverage"
 	}
 }
