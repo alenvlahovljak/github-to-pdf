@@ -27,7 +27,7 @@ Alternately, to quickly try out this repo at [THIS](https://github-to-pdf.netlif
 
 # ![Data Flow Diagram](./docs/Data-Flow-Diagram.png)
 
-# ![Data Flow Diagram - detailed](./docs/Data-Flow-Diagram_detailed.png)
+# ![Data Flow Diagram - detailed](./docs/Data-Flow-Digram_detailed.png)
 
 # Code Overview
 
